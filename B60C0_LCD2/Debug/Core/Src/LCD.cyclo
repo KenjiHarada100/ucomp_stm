@@ -1,0 +1,6 @@
+../Core/Src/LCD.c:12:6:init_lcd	1
+../Core/Src/LCD.c:32:6:write_lcd_data	2
+../Core/Src/LCD.c:66:6:lcd_puts	2
+../Core/Src/LCD.c:74:6:lcd_xy	1
+../Core/Src/LCD.c:80:9:str_count	2
+../Core/Src/LCD.c:89:6:lcd_puts_Right	3

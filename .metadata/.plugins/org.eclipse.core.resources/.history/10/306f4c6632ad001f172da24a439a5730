@@ -1,0 +1,39 @@
+/*
+ * LCD.h
+ *
+ *  Created on: Nov 14, 2024
+ *      Author: 24eo0118
+ */
+
+#pragma once              // ヘッダファイルの二重インクルード防止
+#ifndef _LCD_H_           // マクロによる二重インクルード防止
+#define _LCD_H_
+
+// LCDのモード定義
+#define LCD_CMD     0     // コマンドモード
+#define LCD_DAT     1     // データモード
+
+// LCDのコマンド定義
+#define LCD_CLAR    0x01  // 画面クリア
+#define LCD_HOME    0x02  // カーソルをホーム位置へ移動
+#define LCD_ENTSET  0x06  // エントリモードセット
+#define LCD_DISP_OFF 0x08 // 表示オフ
+#define LCD_DISP_NCUR 0x0c // カーソルなしで表示オン
+#define LCD_DISP_CUR 0x0e  // カーソル付きで表示オン
+#define LCD_DISP_BNK 0x0d  // カーソル点滅
+#define LCD_DISP_ALL 0x0f  // 全体表示
+#define LCD_INIT8B  0x30   // 8ビットモード初期化
+#define LCD_FCSET8B 0x38   // 8ビット動作設定
+#define LCD_INIT4B  0x20   // 4ビットモード初期化
+#define LCD_FCSET4B 0x28   // 4ビット動作設定
+
+// LCD制御用の関数プロトタイプ宣言
+void init_lcd(void);                // LCDの初期化
+void write_lcd_data(uint8_t, uint8_t); // LCDにデータ送信
+void lcd_puts(uint8_t *);           // 文字列をLCDに表示
+void lcd_xy(uint8_t, uint8_t);      // LCDのカーソル位置設定
+uint_8 str_count(uint_8 []); //文字数を数える関数
+void lcd_puts_Right(uint8_t *); //右詰めで文字を表示するための関数
+
+#endif // _LCD_H_
+

@@ -1,0 +1,10 @@
+14:15:25 **** Incremental Build of configuration Debug for project B60C0_LCDTEST ****
+make -j8 all 
+arm-none-eabi-size  B60C0_LCDTEST.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8248	     12	   1764	  10024	   2728	B60C0_LCDTEST.elf
+Finished building: default.size.stdout
+ 
+
+14:15:26 Build Finished. 0 errors, 0 warnings. (took 755ms)
+
